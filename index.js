@@ -59,7 +59,7 @@ function renderDom(who, text) {
                  </div>`
     } else if (who === 'robot') {
         oDiv.classList.add('robot');
-        oDiv.innerHTML = `<img src="./照片.jpg" alt="" class="avatar">
+        oDiv.innerHTML = `<img src="./照片.jpeg" alt="" class="avatar">
         <div class="text">${text}</div>`
     }
     content.appendChild(oDiv);
