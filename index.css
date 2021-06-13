@@ -1,0 +1,113 @@
+body, h1{
+    margin:0px;
+}
+
+.container{
+    width:600px;
+    height:100vh;
+    background-color:#eee;
+    margin:0 auto;
+    position: relative;
+}
+
+.container .title h1{
+    height:40px;
+    line-height:40px;
+    color:#fff;
+    background-color:grey;
+    font-size:16px;
+    text-align: center;
+    font-weight:bold;
+}
+.clearfix::after{
+    content:'';
+    display: block;
+    clear:both;
+}
+.container .dialog-content{
+    height:calc(100vh - 90px);
+    overflow-y:scroll;
+}
+.container .dialog-content::-webkit-scrollbar{
+    width:0px;
+}
+.container .dialog-content .avatar{
+    width:30px;
+    height:30px;
+}
+.container .dialog-content .myself{
+    width:100%;
+} 
+.container .dialog-content .myself .text{
+    float:right;
+}
+.container .dialog-content .myself .avatar{
+    float:right;
+    margin-right:10px;
+}
+
+.container .dialog-content .robot .text{
+    float:left;
+}
+.container .dialog-content .robot .avatar {
+    float:left;
+    margin-left:10px;
+}
+.container .dialog-content>div{
+    margin:10px 0px;
+}
+.container .dialog-content .text{
+    max-width:300px;
+    line-height: 30px;
+    padding: 0px 5px;
+    border-radius:5px;
+}
+.container .dialog-content .myself .text{
+    background-color:greenyellow;
+    margin-right:10px;
+    position: relative;
+}
+.container .dialog-content .myself .text::after{
+    content:'';
+    border:5px solid transparent;
+    position: absolute;
+    right:-10px;
+    top:10px;
+    border-left-color:greenyellow;
+}
+
+.container .dialog-content .robot .text{
+    background-color:#fff;
+    position: relative;
+    margin-left:10px;
+}
+
+.container .dialog-content .robot .text::after{
+    content:'';
+    border:5px solid transparent;
+    position: absolute;
+    left:-10px;
+    top:10px;
+    border-right-color:#fff;
+}
+
+.container .footer{
+    height:50px;
+    width:100%;
+    line-height: 50px;/*并不会直接起作用，因为这个属性只对inine起作用，所以会继承到input和button上*/
+    background-color:#ddd;
+    position: absolute;
+    z-index:10;
+    bottom:0px;
+    left:0px;
+    text-align: center;/*会继承到子元素*/
+}
+
+.container .footer input{
+    height:30px;
+    width:500px;
+}
+.container .footer button{
+    width:50px;
+    height:30px;/*这样设置的目的是为了避免设置了border-box之后padding不会将内容挤掉*/
+}
